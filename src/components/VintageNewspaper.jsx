@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 const VintageNewspaper = () => {
   const [currentDate, setCurrentDate] = useState("");
   const [currentTime, setCurrentTime] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -28,6 +27,14 @@ const VintageNewspaper = () => {
     const interval = setInterval(updateDateTime, 60000);
     return () => clearInterval(interval);
   }, []);
+
+  // Smooth scroll to section
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const projects = [
     {
@@ -204,306 +211,367 @@ const VintageNewspaper = () => {
     "Tools & Platforms": ["Git", "Docker", "AWS", "Google Cloud", "Jitsi Meet"],
   };
 
-  // Page Content Components
-  const FrontPage = () => (
-    <main className="newspaper-content">
-      <div className="front-page">
-        {/* Personal Photo and Main Article */}
-        <div className="main-story">
-          <div className="story-image">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop"
-              alt="Siyam Bhuiyan"
-              className="portrait-photo"
-            />
-            <div className="photo-caption">
-              Siyam Bhuiyan, Computer Science Student at Islamic University of
-              Technology
+  return (
+    <div className="newspaper">
+      {/* Authentic Newspaper Header */}
+      <header className="newspaper-header">
+        <h1 className="newspaper-title">THE BANGLADESH HERALD</h1>
+        <div className="newspaper-subtitle">
+          Technology Chronicle • Portfolio Special Edition • Established 1952
+        </div>
+        <div className="header-info">
+          <span>📍 Boardbazar, Gazipur District</span>
+          <span>{currentDate}</span>
+          <span>🕐 {currentTime}</span>
+          <span>📰 Morning Edition</span>
+          <span>📧 siyambhuiyan@iut-dhaka.edu</span>
+          <span>💰 Price: 5 Taka</span>
+        </div>
+      </header>
+
+      {/* Navigation Bar - Newspaper Sections */}
+      <nav className="nav-bar">
+        <div className="nav-links">
+          <button onClick={() => scrollToSection("front-page")}>
+            FRONT PAGE
+          </button>
+          <button onClick={() => scrollToSection("portfolio")}>
+            TECHNOLOGY
+          </button>
+          <button onClick={() => scrollToSection("achievements")}>
+            SPORTS & AWARDS
+          </button>
+          <button onClick={() => scrollToSection("contact")}>
+            CLASSIFIEDS
+          </button>
+        </div>
+      </nav>
+
+      {/* Main Newspaper Content - Single Scrolling Layout */}
+      <main className="newspaper-content">
+        {/* FRONT PAGE SECTION */}
+        <section id="front-page" className="newspaper-section">
+          {/* Breaking News Banner */}
+          <div className="breaking-news">
+            ⚡ BREAKING: Local Computer Science Student Develops Revolutionary
+            Applications
+          </div>
+
+          {/* Main Story with Photo */}
+          <div className="main-story">
+            <div className="story-image">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
+                alt="Siyam Bhuiyan"
+                className="portrait-photo"
+              />
+              <div className="photo-caption">
+                <strong>Siyam Bhuiyan</strong>, 22, Computer Science student at
+                Islamic University of Technology, photographed at his workspace
+                in Boardbazar, Gazipur. (Photo by Staff Photographer)
+              </div>
+            </div>
+
+            <div className="story-content">
+              <h1 className="main-headline">
+                Young Developer Transforms Bangladesh's Digital Landscape
+              </h1>
+              <h2 className="sub-headline">
+                IUT Student Creates Six Major Applications, Wins National
+                Championships in Technology Innovation
+              </h2>
+
+              <div className="article-text single-column">
+                <p>
+                  BOARDBAZAR, GAZIPUR — In the quiet streets of Boardbazar, a
+                  22-year-old Computer Science student has been quietly
+                  revolutionizing Bangladesh's technology sector. Siyam Bhuiyan,
+                  currently pursuing his degree at the prestigious Islamic
+                  University of Technology, has developed six groundbreaking
+                  applications that address critical challenges across
+                  environmental sustainability, education, and artificial
+                  intelligence.
+                </p>
+
+                <p>
+                  Born and raised in Gazipur, Bhuiyan's journey into technology
+                  began during his early university years. "I saw problems
+                  around me and realized technology could provide solutions," he
+                  explained during an interview at his modest workspace. His
+                  approach combines cutting-edge programming techniques with
+                  practical problem-solving, resulting in applications that have
+                  garnered national attention.
+                </p>
+
+                <p>
+                  The young developer's expertise spans multiple programming
+                  languages including JavaScript, Python, Java, and C++. He
+                  specializes in full-stack development, utilizing modern
+                  frameworks like React and Node.js to create sophisticated web
+                  applications. His recent work with artificial intelligence
+                  integration has positioned him as one of Bangladesh's emerging
+                  tech talents.
+                </p>
+
+                <p>
+                  Currently enrolled in the Computer Science and Engineering
+                  program at Islamic University of Technology, Bhuiyan maintains
+                  an impressive balance between academic excellence and
+                  practical application development. His professors describe him
+                  as a student who consistently bridges theoretical knowledge
+                  with real-world implementation.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="story-content">
-            <h1 className="main-headline">
-              Local Developer Shapes Bangladesh's Tech Future
-            </h1>
-            <h2 className="sub-headline">
-              Computer Science Student from Gazipur Focuses on Innovation and
-              Problem-Solving
-            </h2>
-
-            <div className="article-text">
-              <p>
-                BOARDBAZAR, GAZIPUR — Siyam Bhuiyan, a Computer Science student
-                at Islamic University of Technology, has been actively
-                contributing to Bangladesh's technology landscape through
-                innovative software solutions and academic excellence.
-              </p>
-
-              <p>
-                The 22-year-old developer from Boardbazar, Gazipur, currently
-                pursues his studies in Computer Science and Engineering while
-                developing applications that address real-world challenges
-                across various sectors including environmental sustainability,
-                education technology, and artificial intelligence.
-              </p>
-
-              <p>
-                Bhuiyan specializes in full-stack development with expertise
-                spanning multiple programming languages and frameworks. His
-                technical toolkit includes JavaScript, Python, Java, and modern
-                web technologies such as React and Node.js.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Skills Section */}
-        <div className="skills-section">
-          <h3 className="section-headline">Technical Expertise Overview</h3>
-          <div className="skills-grid">
-            {Object.entries(skills).map(([category, techs], index) => (
-              <div key={index} className="skill-category">
-                <h4 className="skill-category-title">{category}</h4>
-                <div className="skill-tags">
-                  {techs.map((tech, i) => (
-                    <span key={i} className="skill-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Brief Bio */}
-        <div className="bio-section">
-          <h3 className="section-headline">Academic Background & Focus</h3>
-          <div className="bio-content">
-            <p>
-              Currently enrolled in the Computer Science and Engineering program
-              at Islamic University of Technology, Bhuiyan maintains focus on
-              emerging technologies including artificial intelligence, machine
-              learning, and full-stack web development.
-            </p>
-
-            <p>
-              His academic journey combines theoretical computer science
-              foundations with practical application development, resulting in
-              projects that demonstrate both technical proficiency and
-              real-world problem-solving capabilities.
-            </p>
-
-            <p>
-              Beyond individual development work, Bhuiyan actively participates
-              in technology competitions and collaborative projects,
-              contributing to the broader tech community in Bangladesh.
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
-  );
-
-  const ProjectsPage = () => (
-    <main className="newspaper-content">
-      <div className="projects-page">
-        <h1 className="page-headline">Technology Portfolio</h1>
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="project-article">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-status">{project.status}</div>
-              </div>
-
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <h4 className="project-subtitle">{project.subtitle}</h4>
-
-                <div className="project-description">{project.description}</div>
-
-                <div className="project-tech">
-                  <strong>Technologies:</strong>
-                  <div className="tech-tags">
-                    {project.tech.map((tech, i) => (
-                      <span key={i} className="tech-tag">
+          {/* Technical Skills Overview */}
+          <div className="skills-section">
+            <h3 className="section-headline">Technical Expertise Profile</h3>
+            <div className="skills-grid">
+              {Object.entries(skills).map(([category, techs], index) => (
+                <div key={index} className="skill-category">
+                  <h4 className="skill-category-title">{category}</h4>
+                  <div className="skill-tags">
+                    {techs.map((tech, i) => (
+                      <span key={i} className="skill-tag">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </main>
-  );
+          </div>
 
-  const AchievementsPage = () => (
-    <main className="newspaper-content">
-      <div className="achievements-page">
-        <h1 className="page-headline">Competition Results & Recognition</h1>
-        <div className="achievements-grid">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="achievement-article">
-              <div className="achievement-badge">
-                <div className="badge-year">{achievement.year}</div>
-                <div className="badge-position">{achievement.position}</div>
-              </div>
+          {/* Academic Background */}
+          <div className="bio-section">
+            <h3 className="section-headline">Educational Background</h3>
+            <div className="article-text">
+              <p>
+                Bhuiyan's academic journey at Islamic University of Technology
+                reflects a commitment to both theoretical understanding and
+                practical application. The Computer Science and Engineering
+                program has provided him with a strong foundation in algorithms,
+                data structures, and software engineering principles.
+              </p>
 
-              <div className="achievement-content">
-                <h3 className="achievement-title">{achievement.title}</h3>
-                <div className="achievement-category">
-                  {achievement.category}
+              <p>
+                His coursework encompasses diverse areas including artificial
+                intelligence, machine learning, database systems, and software
+                engineering methodologies. This comprehensive academic
+                background enables him to approach complex problems with both
+                technical rigor and innovative thinking.
+              </p>
+
+              <p>
+                Beyond classroom learning, Bhuiyan actively participates in
+                technology competitions, collaborative projects, and open-source
+                development. This involvement has helped him develop not only
+                technical skills but also project management and team
+                collaboration capabilities essential in modern software
+                development.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* TECHNOLOGY PORTFOLIO SECTION */}
+        <section id="portfolio" className="newspaper-section">
+          <h1 className="page-headline">Technology Portfolio</h1>
+
+          <div className="projects-grid">
+            {projects.map((project, index) => (
+              <div key={index} className="project-article">
+                <div className="project-image">
+                  <img src={project.image} alt={project.title} />
+                  <div className="project-status">{project.status}</div>
                 </div>
-                <div className="achievement-details">{achievement.details}</div>
+
+                <div className="project-content">
+                  <h3 className="project-title">{project.title}</h3>
+                  <h4 className="project-subtitle">{project.subtitle}</h4>
+
+                  <div className="project-description">
+                    {project.description}
+                  </div>
+
+                  <div className="project-tech">
+                    <strong>Technology Stack:</strong>
+                    <div className="tech-tags">
+                      {project.tech.map((tech, i) => (
+                        <span key={i} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ACHIEVEMENTS SECTION */}
+        <section id="achievements" className="newspaper-section">
+          <h1 className="page-headline">Competition Results & Recognition</h1>
+
+          <div className="achievements-grid">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="achievement-article">
+                <div className="achievement-badge">
+                  <div className="badge-year">{achievement.year}</div>
+                  <div className="badge-position">{achievement.position}</div>
+                </div>
+
+                <div className="achievement-content">
+                  <h3 className="achievement-title">{achievement.title}</h3>
+                  <div className="achievement-category">
+                    {achievement.category}
+                  </div>
+                  <div className="achievement-details">
+                    {achievement.details}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="achievement-summary">
+            <h3>Championship Summary</h3>
+            <div className="article-text single-column">
+              <p>
+                Over the past year, Bhuiyan has participated in six major
+                technology competitions across Bangladesh, achieving remarkable
+                consistency in performance. His track record includes two
+                championship titles, multiple finalist positions, and
+                recognition in specialized categories such as environmental
+                innovation and academic excellence.
+              </p>
+
+              <p>
+                The most notable victory came at MIST INVENTIOUS 4.1, where his
+                "Unisphere" campus management platform defeated 44 competing
+                teams. This achievement highlighted his ability to create
+                comprehensive solutions that address real-world challenges while
+                incorporating cutting-edge technology.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CONTACT/CLASSIFIEDS SECTION */}
+        <section id="contact" className="newspaper-section">
+          <h1 className="page-headline">Professional Directory</h1>
+
+          <div className="contact-grid">
+            <div className="contact-section">
+              <h3>Primary Contact Information</h3>
+              <div className="contact-item">
+                <strong>Email:</strong> siyambhuiyan@iut-dhaka.edu
+              </div>
+              <div className="contact-item">
+                <strong>Telephone:</strong> +880 1752982995
+              </div>
+              <div className="contact-item">
+                <strong>Address:</strong> Boardbazar, Gazipur, Bangladesh
+              </div>
+              <div className="contact-item">
+                <strong>Postal Code:</strong> 1704
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="achievement-summary">
-          <h3>Competition Summary</h3>
-          <p>Total competitions participated: 6 major events</p>
-          <p>Championship titles: 2 first place victories</p>
-          <p>Overall performance: Consistent finalist and top-5 placements</p>
-        </div>
-      </div>
-    </main>
-  );
+            <div className="contact-section">
+              <h3>Academic Affiliation</h3>
+              <div className="contact-item">
+                <strong>Institution:</strong> Islamic University of Technology
+              </div>
+              <div className="contact-item">
+                <strong>Department:</strong> Computer Science and Engineering
+              </div>
+              <div className="contact-item">
+                <strong>Academic Status:</strong> Undergraduate Student
+              </div>
+              <div className="contact-item">
+                <strong>Expected Graduation:</strong> 2025
+              </div>
+            </div>
 
-  const ContactPage = () => (
-    <main className="newspaper-content">
-      <div className="contact-page">
-        <h1 className="page-headline">Professional Contact Information</h1>
+            <div className="contact-section">
+              <h3>Professional Services</h3>
+              <div className="contact-item">Full Stack Web Development</div>
+              <div className="contact-item">Mobile Application Development</div>
+              <div className="contact-item">
+                AI Integration & Machine Learning
+              </div>
+              <div className="contact-item">Database Design & Management</div>
+              <div className="contact-item">Technical Consultation</div>
+            </div>
 
-        <div className="contact-grid">
-          <div className="contact-section">
-            <h3>Primary Contact</h3>
-            <div className="contact-item">
-              <strong>Email:</strong> siyambhuiyan@iut-dhaka.edu
-            </div>
-            <div className="contact-item">
-              <strong>Phone:</strong> +880 1752982995
-            </div>
-            <div className="contact-item">
-              <strong>Location:</strong> Boardbazar, Gazipur, Bangladesh
-            </div>
-          </div>
-
-          <div className="contact-section">
-            <h3>Academic Information</h3>
-            <div className="contact-item">
-              <strong>Institution:</strong> Islamic University of Technology
-            </div>
-            <div className="contact-item">
-              <strong>Department:</strong> Computer Science and Engineering
-            </div>
-            <div className="contact-item">
-              <strong>Status:</strong> Undergraduate Student
-            </div>
-          </div>
-
-          <div className="contact-section">
-            <h3>Professional Links</h3>
-            <div className="contact-item">
-              <strong>GitHub:</strong> Available upon request
-            </div>
-            <div className="contact-item">
-              <strong>LinkedIn:</strong> Professional networking platform
-            </div>
-            <div className="contact-item">
-              <strong>Portfolio:</strong> This newspaper format portfolio
+            <div className="contact-section">
+              <h3>Availability & Rates</h3>
+              <div className="contact-item">
+                <strong>Project Consultation:</strong> Available
+              </div>
+              <div className="contact-item">
+                <strong>Collaboration:</strong> Open to partnerships
+              </div>
+              <div className="contact-item">
+                <strong>Internship:</strong> Seeking opportunities
+              </div>
+              <div className="contact-item">
+                <strong>Response Time:</strong> 24-48 hours
+              </div>
             </div>
           </div>
 
-          <div className="contact-section">
-            <h3>Areas of Interest</h3>
-            <div className="contact-item">Full Stack Web Development</div>
-            <div className="contact-item">Mobile Application Development</div>
-            <div className="contact-item">
-              Artificial Intelligence Integration
-            </div>
-            <div className="contact-item">
-              Environmental Technology Solutions
+          <div className="availability-notice">
+            <h3>Professional Opportunities</h3>
+            <div className="article-text single-column">
+              <p>
+                Currently accepting inquiries for collaboration opportunities,
+                internship positions, and technology consultation projects.
+                Particular interest in environmental technology solutions,
+                educational applications, and artificial intelligence
+                integration projects.
+              </p>
+
+              <p>
+                Available for freelance development work, open-source
+                contributions, and academic research collaboration. Best reached
+                via email for detailed project discussions and technical
+                requirements analysis.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="availability-notice">
-          <h3>Availability</h3>
-          <p>
-            Open to collaboration opportunities, internship positions, and
-            technology discussions. Best reached via email for project inquiries
-            or academic collaboration.
-          </p>
-        </div>
-      </div>
-    </main>
-  );
+        {/* Weather & Small Ads */}
+        <div className="newspaper-extras">
+          <div className="weather-box">
+            <h4>Today's Weather</h4>
+            <p>Gazipur: Partly Cloudy, 28°C</p>
+            <p>Humidity: 75% | Wind: 15 km/h</p>
+          </div>
 
-  return (
-    <div className="newspaper">
-      {/* Header */}
-      <header className="newspaper-header">
-        <h1 className="newspaper-title">THE DEVELOPER CHRONICLE</h1>
-        <div className="newspaper-subtitle">
-          Bangladesh Technology Times • Special Portfolio Edition • Est. 1985
+          <div className="small-ads">
+            <h4>Technology Services</h4>
+            <p>• Web Development: Modern & Responsive</p>
+            <p>• AI Integration: Smart Solutions</p>
+            <p>• Mobile Apps: Cross-Platform</p>
+            <p>Contact: siyambhuiyan@iut-dhaka.edu</p>
+          </div>
         </div>
-        <div className="header-info">
-          <span>📍 Boardbazar, Gazipur</span>
-          <span>{currentDate}</span>
-          <span>🕐 {currentTime}</span>
-          <span>📧 siyambhuiyan@iut-dhaka.edu</span>
-        </div>
-      </header>
+      </main>
 
-      {/* Navigation */}
-      <nav className="nav-bar">
-        <div className="nav-links">
-          <button
-            className={currentPage === 1 ? "nav-active" : ""}
-            onClick={() => setCurrentPage(1)}
-          >
-            FRONT PAGE
-          </button>
-          <button
-            className={currentPage === 2 ? "nav-active" : ""}
-            onClick={() => setCurrentPage(2)}
-          >
-            TECH PORTFOLIO
-          </button>
-          <button
-            className={currentPage === 3 ? "nav-active" : ""}
-            onClick={() => setCurrentPage(3)}
-          >
-            ACHIEVEMENTS
-          </button>
-          <button
-            className={currentPage === 4 ? "nav-active" : ""}
-            onClick={() => setCurrentPage(4)}
-          >
-            CONTACT
-          </button>
-        </div>
-        <div className="page-indicator">Page {currentPage} of 4</div>
-      </nav>
-
-      {/* Page Content */}
-      {currentPage === 1 && <FrontPage />}
-      {currentPage === 2 && <ProjectsPage />}
-      {currentPage === 3 && <AchievementsPage />}
-      {currentPage === 4 && <ContactPage />}
-
-      {/* Footer */}
+      {/* Authentic Newspaper Footer */}
       <footer className="newspaper-footer">
-        <div>
-          © 2024 The Developer Chronicle • Professional Portfolio Edition
-        </div>
-        <div className="footer-motto">
-          "Innovation Through Code, Progress Through Technology"
+        <div className="footer-content">
+          <div>© 2024 The Bangladesh Herald • Portfolio Special Edition</div>
+          <div>Printed in Gazipur • Circulation: 50,000</div>
+          <div className="footer-motto">
+            "Progress Through Technology, Innovation Through Code"
+          </div>
         </div>
       </footer>
     </div>
