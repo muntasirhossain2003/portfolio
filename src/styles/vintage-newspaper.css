@@ -10,11 +10,11 @@
 
 body {
   font-family: "Times New Roman", Times, serif;
-  background-color: #f5f5dc; /* Beige paper color */
-  color: #2c2c2c;
+  background-color: #efebe4; /* More aged, yellowed paper */
+  color: #3a3830; /* Faded ink black */
   line-height: 1.6;
-  background-image: linear-gradient(90deg, transparent 99%, #e8e8e8 100%),
-    linear-gradient(180deg, transparent 99%, #e8e8e8 100%);
+  background-image: linear-gradient(90deg, transparent 99%, #d9d5ce 100%),
+    linear-gradient(180deg, transparent 99%, #d9d5ce 100%);
   background-size: 20px 20px;
 }
 
@@ -22,16 +22,16 @@ body {
 .newspaper {
   max-width: 1000px;
   margin: 20px auto;
-  background: #faf8f0;
-  border: 3px solid #8b4513;
-  box-shadow: 0 0 0 1px #8b4513, 0 4px 8px rgba(0, 0, 0, 0.3),
-    inset 0 0 30px rgba(139, 69, 19, 0.1);
+  background: #f0ece3; /* Aged newspaper background */
+  border: 3px solid #5d4e37; /* Muted brown like old ink */
+  box-shadow: 0 0 0 1px #5d4e37, 0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 0 30px rgba(93, 78, 55, 0.08);
 }
 
 /* Header */
 .newspaper-header {
-  background: #faf8f0;
-  border-bottom: 4px double #8b4513;
+  background: #f0ece3; /* Same aged background */
+  border-bottom: 4px double #5d4e37; /* Muted brown border */
   padding: 20px;
   text-align: center;
 }
@@ -40,19 +40,19 @@ body {
   font-family: "Georgia", serif;
   font-size: 3.5rem;
   font-weight: bold;
-  color: #8b4513;
-  text-shadow: 2px 2px 0px #ddd;
+  color: #4a3f2e; /* Faded dark brown like old ink */
+  text-shadow: 1px 1px 0px #d4cfc6; /* Very subtle shadow */
   letter-spacing: 3px;
   margin-bottom: 10px;
 }
 
 .newspaper-subtitle {
   font-size: 0.9rem;
-  color: #666;
+  color: #6b5f52; /* Muted gray-brown */
   letter-spacing: 2px;
   text-transform: uppercase;
-  border-top: 1px solid #8b4513;
-  border-bottom: 1px solid #8b4513;
+  border-top: 1px solid #5d4e37;
+  border-bottom: 1px solid #5d4e37;
   padding: 8px 0;
   margin: 10px 0;
 }
@@ -63,16 +63,16 @@ body {
   align-items: center;
   margin-top: 15px;
   font-size: 0.8rem;
-  color: #555;
+  color: #706454; /* Faded text color */
 }
 
 /* Navigation */
 .nav-bar {
-  background: #8b4513;
-  color: white;
+  background: #5d4e37; /* Muted brown navigation */
+  color: #f0ece3; /* Light aged paper color for text */
   padding: 8px 0;
   text-align: center;
-  border-bottom: 2px solid #654321;
+  border-bottom: 2px solid #4a3f2e;
 }
 
 .nav-links {
@@ -85,20 +85,20 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: #f0ece3; /* Light aged color */
   text-decoration: none;
   padding: 8px 16px;
   transition: background-color 0.3s;
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(240, 236, 227, 0.15); /* Very subtle hover */
 }
 
 /* Main Content Area */
 .newspaper-content {
   padding: 30px;
-  background: #faf8f0;
+  background: #f0ece3; /* Same aged background */
 }
 
 /* Headlines */
@@ -107,17 +107,17 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  color: #8b4513;
+  color: #4a3f2e; /* Faded dark brown */
   margin-bottom: 10px;
-  text-shadow: 1px 1px 0px #ddd;
-  border-bottom: 3px double #8b4513;
+  text-shadow: 1px 1px 0px #d4cfc6; /* Very subtle shadow */
+  border-bottom: 3px double #5d4e37; /* Muted brown border */
   padding-bottom: 15px;
 }
 
 .sub-headline {
   font-size: 1.2rem;
   text-align: center;
-  color: #666;
+  color: #6b5f52; /* Muted gray-brown */
   font-style: italic;
   margin-bottom: 30px;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .column {
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #c9c3b8; /* Muted separator */
   padding-right: 20px;
 }
 
@@ -143,7 +143,7 @@ body {
 /* Article Styles */
 .article {
   margin-bottom: 40px;
-  border-bottom: 1px dotted #8b4513;
+  border-bottom: 1px dotted #5d4e37; /* Muted brown dotted line */
   padding-bottom: 20px;
 }
 
@@ -151,14 +151,14 @@ body {
   font-family: "Georgia", serif;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #2c2c2c;
+  color: #3a3830; /* Faded ink black */
   margin-bottom: 8px;
   line-height: 1.3;
 }
 
 .article-byline {
   font-size: 0.8rem;
-  color: #666;
+  color: #706454; /* Muted text color */
   margin-bottom: 10px;
   font-style: italic;
 }
@@ -167,7 +167,7 @@ body {
   font-size: 0.95rem;
   line-height: 1.7;
   text-align: justify;
-  color: #333;
+  color: #3a3830; /* Consistent faded ink color */
 }
 
 .article-text::first-letter {
@@ -178,36 +178,36 @@ body {
   margin-top: 4px;
   font-family: "Georgia", serif;
   font-weight: bold;
-  color: #8b4513;
+  color: #4a3f2e; /* Muted brown for drop cap */
 }
 
 /* Project Tech Tags */
 .tech-tags {
   margin-top: 10px;
   padding-top: 8px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #d4cfc6; /* Very light aged color */
 }
 
 .tech-tag {
   display: inline-block;
-  background: #f0f0f0;
-  color: #666;
+  background: #ebe7de; /* Light aged background */
+  color: #6b5f52; /* Muted text */
   font-size: 0.7rem;
   padding: 2px 6px;
   margin: 2px;
-  border: 1px solid #ccc;
+  border: 1px solid #c9c3b8; /* Muted border */
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 /* Breaking News Box */
 .breaking-news {
-  background: #8b4513;
-  color: white;
+  background: #5d4e37; /* Muted brown */
+  color: #f0ece3; /* Light aged color */
   padding: 10px;
   margin: 20px 0;
   text-align: center;
-  border: 2px solid #654321;
+  border: 2px solid #4a3f2e; /* Darker muted brown */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -215,15 +215,15 @@ body {
 
 /* Contact Info Box */
 .contact-box {
-  background: #f9f9f9;
-  border: 2px solid #8b4513;
+  background: #ebe7de; /* Light aged background */
+  border: 2px solid #5d4e37; /* Muted brown border */
   padding: 20px;
   margin: 30px 0;
   text-align: center;
 }
 
 .contact-box h3 {
-  color: #8b4513;
+  color: #4a3f2e; /* Faded dark brown */
   margin-bottom: 15px;
   font-family: "Georgia", serif;
   text-transform: uppercase;
@@ -232,11 +232,11 @@ body {
 
 /* Footer */
 .newspaper-footer {
-  background: #8b4513;
-  color: white;
+  background: #5d4e37; /* Muted brown */
+  color: #f0ece3; /* Light aged color */
   padding: 20px;
   text-align: center;
-  border-top: 4px double #654321;
+  border-top: 4px double #4a3f2e; /* Darker muted brown */
   font-size: 0.8rem;
 }
 
