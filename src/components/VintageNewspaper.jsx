@@ -253,8 +253,7 @@ const VintageNewspaper = () => {
         <section id="front-page" className="newspaper-section">
           {/* Breaking News Banner */}
           <div className="breaking-news">
-            ⚡ BREAKING: Local Computer Science Student Develops Revolutionary
-            Applications
+            ⚡ PORTFOLIO: Computer Science Student Documents Personal Projects
           </div>
 
           {/* Main Story with Photo */}
@@ -266,60 +265,48 @@ const VintageNewspaper = () => {
                 className="portrait-photo"
               />
               <div className="photo-caption">
-                <strong>Siyam Bhuiyan</strong>, 22, Computer Science student at
-                Islamic University of Technology, photographed at his workspace
-                in Boardbazar, Gazipur. (Photo by Staff Photographer)
+                <strong>Siyam Bhuiyan</strong>, Computer Science student at
+                Islamic University of Technology, at his workspace in
+                Boardbazar, Gazipur.
               </div>
             </div>
 
             <div className="story-content">
-              <h1 className="main-headline">
-                Young Developer Transforms Bangladesh's Digital Landscape
-              </h1>
+              <h1 className="main-headline">My Journey in Computer Science</h1>
               <h2 className="sub-headline">
-                IUT Student Creates Six Major Applications, Wins National
-                Championships in Technology Innovation
+                Personal Portfolio and Academic Progress Documentation
               </h2>
 
               <div className="article-text single-column">
                 <p>
-                  BOARDBAZAR, GAZIPUR — In the quiet streets of Boardbazar, a
-                  22-year-old Computer Science student has been quietly
-                  revolutionizing Bangladesh's technology sector. Siyam Bhuiyan,
-                  currently pursuing his degree at the prestigious Islamic
-                  University of Technology, has developed six groundbreaking
-                  applications that address critical challenges across
-                  environmental sustainability, education, and artificial
-                  intelligence.
+                  My name is Siyam Bhuiyan, and I am currently studying Computer
+                  Science and Engineering at Islamic University of Technology. I
+                  live in Boardbazar, Gazipur, and I have been working on
+                  various software development projects during my university
+                  years.
                 </p>
 
                 <p>
-                  Born and raised in Gazipur, Bhuiyan's journey into technology
-                  began during his early university years. "I saw problems
-                  around me and realized technology could provide solutions," he
-                  explained during an interview at his modest workspace. His
-                  approach combines cutting-edge programming techniques with
-                  practical problem-solving, resulting in applications that have
-                  garnered national attention.
+                  I started programming during my early university days when I
+                  became interested in solving problems through technology. I
+                  have developed several applications focusing on different
+                  areas including environmental issues, education systems, and
+                  AI integration.
                 </p>
 
                 <p>
-                  The young developer's expertise spans multiple programming
-                  languages including JavaScript, Python, Java, and C++. He
-                  specializes in full-stack development, utilizing modern
-                  frameworks like React and Node.js to create sophisticated web
-                  applications. His recent work with artificial intelligence
-                  integration has positioned him as one of Bangladesh's emerging
-                  tech talents.
+                  My technical skills include programming languages like
+                  JavaScript, Python, Java, and C++. I work with web
+                  technologies such as React and Node.js, and I have experience
+                  with mobile development using React Native. I also work with
+                  various databases and cloud platforms.
                 </p>
 
                 <p>
-                  Currently enrolled in the Computer Science and Engineering
-                  program at Islamic University of Technology, Bhuiyan maintains
-                  an impressive balance between academic excellence and
-                  practical application development. His professors describe him
-                  as a student who consistently bridges theoretical knowledge
-                  with real-world implementation.
+                  I am currently in my undergraduate program at IUT, where I
+                  balance my coursework with personal projects. I participate in
+                  programming competitions and technology events to improve my
+                  skills and learn from other developers.
                 </p>
               </div>
             </div>
@@ -327,7 +314,7 @@ const VintageNewspaper = () => {
 
           {/* Technical Skills Overview */}
           <div className="skills-section">
-            <h3 className="section-headline">Technical Expertise Profile</h3>
+            <h3 className="section-headline">My Technical Skills</h3>
             <div className="skills-grid">
               {Object.entries(skills).map(([category, techs], index) => (
                 <div key={index} className="skill-category">
@@ -346,31 +333,28 @@ const VintageNewspaper = () => {
 
           {/* Academic Background */}
           <div className="bio-section">
-            <h3 className="section-headline">Educational Background</h3>
+            <h3 className="section-headline">My Academic Background</h3>
             <div className="article-text">
               <p>
-                Bhuiyan's academic journey at Islamic University of Technology
-                reflects a commitment to both theoretical understanding and
-                practical application. The Computer Science and Engineering
-                program has provided him with a strong foundation in algorithms,
-                data structures, and software engineering principles.
+                I am pursuing my Bachelor's degree in Computer Science and
+                Engineering at Islamic University of Technology. My coursework
+                covers fundamental areas like algorithms, data structures,
+                software engineering, and database systems.
               </p>
 
               <p>
-                His coursework encompasses diverse areas including artificial
-                intelligence, machine learning, database systems, and software
-                engineering methodologies. This comprehensive academic
-                background enables him to approach complex problems with both
-                technical rigor and innovative thinking.
+                I have taken courses in artificial intelligence, machine
+                learning, and web development. These subjects have helped me
+                understand both theoretical concepts and practical
+                implementation techniques that I apply in my personal projects.
               </p>
 
               <p>
-                Beyond classroom learning, Bhuiyan actively participates in
-                technology competitions, collaborative projects, and open-source
-                development. This involvement has helped him develop not only
-                technical skills but also project management and team
-                collaboration capabilities essential in modern software
-                development.
+                Apart from regular classes, I participate in coding
+                competitions, attend tech events, and work on collaborative
+                projects with fellow students. These activities help me stay
+                updated with current technologies and improve my problem-solving
+                abilities.
               </p>
             </div>
           </div>
@@ -438,23 +422,22 @@ const VintageNewspaper = () => {
           </div>
 
           <div className="achievement-summary">
-            <h3>Championship Summary</h3>
+            <h3>My Competition Experience</h3>
             <div className="article-text single-column">
               <p>
-                Over the past year, Bhuiyan has participated in six major
-                technology competitions across Bangladesh, achieving remarkable
-                consistency in performance. His track record includes two
-                championship titles, multiple finalist positions, and
-                recognition in specialized categories such as environmental
-                innovation and academic excellence.
+                Over the past year, I have participated in six major technology
+                competitions across Bangladesh. I have achieved two championship
+                titles, multiple finalist positions, and recognition in
+                specialized categories such as environmental innovation and
+                academic excellence.
               </p>
 
               <p>
-                The most notable victory came at MIST INVENTIOUS 4.1, where his
-                "Unisphere" campus management platform defeated 44 competing
-                teams. This achievement highlighted his ability to create
-                comprehensive solutions that address real-world challenges while
-                incorporating cutting-edge technology.
+                My most notable victory came at MIST INVENTIOUS 4.1, where my
+                "Unisphere" campus management platform won against 44 competing
+                teams. This experience taught me how to create comprehensive
+                solutions that address real-world challenges while incorporating
+                current technology trends.
               </p>
             </div>
           </div>

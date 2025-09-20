@@ -162,12 +162,12 @@ body::before {
   z-index: 2;
 }
 
-/* Header - Authentic Newspaper Masthead */
+/* Header - Compact Authentic Newspaper Masthead */
 .newspaper-header {
   background: linear-gradient(180deg, #f6f3ed 0%, #f2ede5 50%, #ede8e0 100%);
-  border-bottom: 6px double #2a2520;
-  border-top: 2px solid #2a2520;
-  padding: 25px 30px;
+  border-bottom: 4px double #2a2520;
+  border-top: 1px solid #2a2520;
+  padding: 15px 30px;
   text-align: center;
   position: relative;
   /* Add subtle aging to header */
@@ -178,26 +178,26 @@ body::before {
 .newspaper-header::before {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 5px;
   left: 30px;
   right: 30px;
-  height: 2px;
+  height: 1px;
   background: repeating-linear-gradient(
     90deg,
     #2a2520 0px,
-    #2a2520 10px,
-    transparent 10px,
-    transparent 15px
+    #2a2520 8px,
+    transparent 8px,
+    transparent 12px
   );
 }
 
 .newspaper-header::after {
   content: "";
   position: absolute;
-  bottom: 8px;
+  bottom: 5px;
   left: 30px;
   right: 30px;
-  height: 2px;
+  height: 1px;
   background: repeating-linear-gradient(
     90deg,
     #2a2520 0px,
@@ -209,13 +209,13 @@ body::before {
 
 .newspaper-title {
   font-family: "Libre Baskerville", "Playfair Display", serif;
-  font-size: 4.5rem;
+  font-size: 2.8rem;
   font-weight: 900;
   color: #1a1712;
-  text-shadow: 2px 2px 0px rgba(139, 116, 90, 0.3),
+  text-shadow: 1px 1px 0px rgba(139, 116, 90, 0.3),
     1px 1px 0px rgba(101, 85, 65, 0.2);
-  letter-spacing: 8px;
-  margin: 20px 0 15px 0;
+  letter-spacing: 4px;
+  margin: 8px 0 8px 0;
   text-transform: uppercase;
   /* Vintage ink bleeding effect */
   filter: contrast(1.2);
@@ -226,7 +226,7 @@ body::before {
 .newspaper-title::before,
 .newspaper-title::after {
   content: "❦";
-  font-size: 2rem;
+  font-size: 1.2rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -235,22 +235,22 @@ body::before {
 }
 
 .newspaper-title::before {
-  left: -50px;
+  left: -35px;
 }
 
 .newspaper-title::after {
-  right: -50px;
+  right: -35px;
 }
 
 .newspaper-subtitle {
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   color: #2a2520;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  border-top: 3px double #2a2520;
-  border-bottom: 3px double #2a2520;
-  padding: 12px 0;
-  margin: 15px 0;
+  border-top: 1px solid #2a2520;
+  border-bottom: 1px solid #2a2520;
+  padding: 6px 0;
+  margin: 8px 0;
   font-weight: bold;
   background: rgba(139, 116, 90, 0.05);
 }
@@ -259,14 +259,14 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
-  font-size: 0.9rem;
+  margin-top: 12px;
+  font-size: 0.7rem;
   color: #2a2520;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 8px;
   font-weight: 500;
-  padding: 10px 0;
-  border-top: 1px solid #2a2520;
+  padding: 6px 0;
+  border-top: 1px solid rgba(42, 37, 32, 0.3);
 }
 
 .header-info span {
