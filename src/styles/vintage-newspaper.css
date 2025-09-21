@@ -1,4 +1,4 @@
-/* Authentic Vintage 1940s-1980s Newspaper with Aging Effects */
+/* Authentic Vintage 1940s-1980s Newspaper with Advanced Aging Effects */
 @import url("https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Georgia:wght@400;700&family=Playfair+Display:wght@400;700;900&family=Libre+Baskerville:wght@400;700&display=swap");
 
 /* Reset and Base */
@@ -11,14 +11,29 @@
 body {
   font-family: "Times New Roman", Times, serif;
   background: 
-    /* Paper grain texture */ radial-gradient(
+    /* Enhanced paper grain texture with fiber patterns */ radial-gradient(
       circle at 25% 25%,
       #f2f0eb 0%,
       transparent 50%
     ),
     radial-gradient(circle at 75% 75%, #ebe9e4 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, #f0ede8 0%, transparent 50%),
-    /* Aged paper base */
+    /* Paper fiber simulation */
+      linear-gradient(
+        45deg,
+        transparent 48%,
+        rgba(218, 210, 195, 0.3) 49%,
+        rgba(218, 210, 195, 0.3) 51%,
+        transparent 52%
+      ),
+    linear-gradient(
+      -45deg,
+      transparent 48%,
+      rgba(228, 220, 205, 0.2) 49%,
+      rgba(228, 220, 205, 0.2) 51%,
+      transparent 52%
+    ),
+    /* Aged yellowing effect */
       linear-gradient(
         45deg,
         #f4f1ec 0%,
@@ -27,28 +42,47 @@ body {
         #ede9e1 75%,
         #f1eee9 100%
       );
-  background-size: 150px 150px, 200px 200px, 100px 100px, 100% 100%;
+  background-size: 150px 150px, 200px 200px, 100px 100px, 8px 8px, 12px 12px,
+    100% 100%;
   color: #2a2520; /* Deep aged ink */
   line-height: 1.6;
-  /* Subtle aging stains */
-  background-image: radial-gradient(
+  /* Advanced aging stains and wear patterns */
+  background-image: 
+    /* Coffee ring stains */ radial-gradient(
       ellipse at top left,
-      rgba(139, 116, 90, 0.08) 0%,
+      rgba(139, 116, 90, 0.12) 0%,
       transparent 40%
     ),
     radial-gradient(
       ellipse at bottom right,
-      rgba(101, 85, 65, 0.06) 0%,
+      rgba(101, 85, 65, 0.1) 0%,
       transparent 35%
     ),
     radial-gradient(
       ellipse at center,
-      rgba(118, 102, 82, 0.04) 0%,
+      rgba(118, 102, 82, 0.06) 0%,
       transparent 50%
-    );
+    ),
+    /* Water damage marks */
+      radial-gradient(
+        ellipse at 15% 85%,
+        rgba(145, 125, 100, 0.08) 0%,
+        transparent 25%
+      ),
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(125, 110, 90, 0.06) 0%,
+      transparent 30%
+    ),
+    /* Ink smudges */
+      radial-gradient(
+        ellipse at 40% 60%,
+        rgba(45, 38, 30, 0.04) 0%,
+        transparent 15%
+      );
 }
 
-/* Newspaper aging overlay */
+/* Enhanced newspaper aging overlay with physical wear simulation */
 body::before {
   content: "";
   position: fixed;
@@ -57,38 +91,74 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    /* Coffee stains and aging spots */ radial-gradient(
-      circle at 20% 30%,
-      rgba(139, 116, 90, 0.12) 0%,
-      transparent 15%
+    /* Coffee stains and aging spots with realistic patterns */ radial-gradient(
+      ellipse 120px 80px at 20% 30%,
+      rgba(139, 116, 90, 0.15) 0%,
+      transparent 60%
     ),
     radial-gradient(
-      circle at 80% 70%,
-      rgba(101, 85, 65, 0.08) 0%,
-      transparent 20%
+      ellipse 100px 150px at 80% 70%,
+      rgba(101, 85, 65, 0.12) 0%,
+      transparent 70%
     ),
     radial-gradient(
-      circle at 60% 20%,
-      rgba(118, 102, 82, 0.06) 0%,
-      transparent 12%
+      ellipse 80px 60px at 60% 20%,
+      rgba(118, 102, 82, 0.08) 0%,
+      transparent 50%
     ),
     radial-gradient(
-      circle at 30% 80%,
-      rgba(92, 78, 58, 0.1) 0%,
-      transparent 18%
+      ellipse 140px 90px at 30% 80%,
+      rgba(92, 78, 58, 0.14) 0%,
+      transparent 65%
     ),
-    /* Paper texture noise */
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    /* Ink bleed patterns */
+      radial-gradient(
+        ellipse 50px 30px at 45% 55%,
+        rgba(45, 38, 30, 0.06) 0%,
+        transparent 40%
+      ),
+    radial-gradient(
+      ellipse 35px 45px at 75% 25%,
+      rgba(35, 30, 25, 0.04) 0%,
+      transparent 35%
+    ),
+    /* Fold line creases */
+      linear-gradient(
+        90deg,
+        transparent 49%,
+        rgba(120, 100, 80, 0.08) 50%,
+        transparent 51%
+      ),
+    linear-gradient(
+      0deg,
+      transparent 32%,
+      rgba(130, 110, 90, 0.06) 33%,
+      transparent 34%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 65%,
+      rgba(125, 105, 85, 0.05) 66%,
+      transparent 67%
+    ),
+    /* Enhanced paper texture noise */
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E"),
+    /* Thumb wear patterns (more worn in center) */
+      radial-gradient(
+        ellipse 300px 200px at center,
+        rgba(110, 95, 75, 0.03) 0%,
+        transparent 70%
+      );
   pointer-events: none;
   z-index: -1;
 }
 
-/* Main Container - Full newspaper feel */
+/* Main Container - Enhanced newspaper with physical simulation */
 .newspaper {
   max-width: 1400px;
   margin: 0 auto;
   background: 
-    /* Paper texture with aging */ linear-gradient(
+    /* Advanced paper texture with aging */ linear-gradient(
       135deg,
       #f6f3ed 0%,
       #f0ebe3 25%,
@@ -96,20 +166,45 @@ body::before {
       #ede8e0 75%,
       #f2ede5 100%
     ),
-    /* Subtle newsprint dots */
-      radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.05) 1px, transparent 0);
-  background-size: 100% 100%, 20px 20px;
+    /* Newsprint halftone dots simulation */
+      radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.05) 1px, transparent 0),
+    /* Paper curl edge effects */
+      linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(220, 210, 190, 0.3) 2%,
+        rgba(220, 210, 190, 0.3) 3%,
+        transparent 5%
+      ),
+    linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(210, 200, 180, 0.2) 2%,
+      rgba(210, 200, 180, 0.2) 3%,
+      transparent 5%
+    );
+  background-size: 100% 100%, 20px 20px, 100% 100%, 100% 100%;
   border: none;
+  /* Enhanced paper shadow with curl effect */
   box-shadow: 
-    /* Paper depth */ inset 0 0 50px rgba(139, 116, 90, 0.15),
-    inset 0 0 100px rgba(101, 85, 65, 0.08),
-    /* Outer shadow */ 0 10px 30px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(139, 116, 90, 0.2);
+    /* Inner paper depth */ inset 0 0 50px
+      rgba(139, 116, 90, 0.18),
+    inset 0 0 100px rgba(101, 85, 65, 0.1),
+    inset 0 0 200px rgba(80, 70, 55, 0.05),
+    /* Outer realistic paper shadow */ 0 15px 40px rgba(0, 0, 0, 0.35),
+    0 5px 15px rgba(0, 0, 0, 0.15),
+    /* Edge definition */ 0 0 0 1px rgba(139, 116, 90, 0.25),
+    /* Subtle curl shadow */ 2px 2px 8px rgba(0, 0, 0, 0.1),
+    -1px -1px 4px rgba(255, 255, 255, 0.2);
   position: relative;
   min-height: 100vh;
+  /* Paper curl transform */
+  transform: perspective(1000px) rotateX(0.5deg) rotateY(-0.3deg);
+  /* Edge wear darkening */
+  border-radius: 1px;
 }
 
-/* Add aging spots and stains to newspaper */
+/* Enhanced aging spots and realistic stain patterns */
 .newspaper::before {
   content: "";
   position: absolute;
@@ -118,36 +213,82 @@ body::before {
   right: 0;
   bottom: 0;
   background: 
-    /* Large aging stains */ radial-gradient(
+    /* Large coffee ring stains with authentic patterns */ radial-gradient(
       ellipse 300px 150px at 15% 25%,
-      rgba(139, 116, 90, 0.08) 0%,
-      transparent 70%
+      rgba(139, 116, 90, 0.12) 0%,
+      rgba(139, 116, 90, 0.08) 40%,
+      transparent 75%
     ),
     radial-gradient(
       ellipse 200px 400px at 85% 60%,
-      rgba(101, 85, 65, 0.06) 0%,
-      transparent 60%
+      rgba(101, 85, 65, 0.09) 0%,
+      rgba(101, 85, 65, 0.05) 35%,
+      transparent 70%
     ),
     radial-gradient(
       ellipse 250px 200px at 45% 80%,
-      rgba(118, 102, 82, 0.05) 0%,
-      transparent 65%
+      rgba(118, 102, 82, 0.07) 0%,
+      rgba(118, 102, 82, 0.04) 45%,
+      transparent 80%
     ),
-    /* Small spots */
+    /* Ink drops and smudges */
       radial-gradient(
         circle 50px at 25% 40%,
-        rgba(92, 78, 58, 0.12) 0%,
+        rgba(92, 78, 58, 0.15) 0%,
+        rgba(92, 78, 58, 0.08) 30%,
         transparent 70%
       ),
     radial-gradient(
       circle 30px at 70% 25%,
-      rgba(139, 116, 90, 0.1) 0%,
+      rgba(139, 116, 90, 0.12) 0%,
       transparent 80%
     ),
     radial-gradient(
       circle 40px at 60% 70%,
-      rgba(101, 85, 65, 0.08) 0%,
+      rgba(101, 85, 65, 0.1) 0%,
       transparent 75%
+    ),
+    /* Water damage marks */
+      radial-gradient(
+        ellipse 180px 120px at 10% 60%,
+        rgba(145, 125, 100, 0.06) 0%,
+        transparent 60%
+      ),
+    radial-gradient(
+      ellipse 150px 200px at 90% 30%,
+      rgba(125, 110, 90, 0.05) 0%,
+      transparent 55%
+    ),
+    /* Grease spots */
+      radial-gradient(
+        circle 25px at 35% 15%,
+        rgba(160, 140, 120, 0.08) 0%,
+        transparent 60%
+      ),
+    radial-gradient(
+      circle 35px at 75% 85%,
+      rgba(150, 130, 110, 0.06) 0%,
+      transparent 65%
+    ),
+    /* Fold wear marks */
+      linear-gradient(
+        90deg,
+        transparent 48%,
+        rgba(120, 100, 80, 0.04) 49%,
+        rgba(120, 100, 80, 0.08) 50%,
+        rgba(120, 100, 80, 0.04) 51%,
+        transparent 52%
+      ),
+    /* Text bleed-through simulation */
+      radial-gradient(
+        circle 2px at 20% 30%,
+        rgba(45, 38, 30, 0.02) 0%,
+        transparent 100%
+      ),
+    radial-gradient(
+      circle 1px at 60% 70%,
+      rgba(35, 30, 25, 0.03) 0%,
+      transparent 100%
     );
   pointer-events: none;
   z-index: 1;
@@ -172,6 +313,71 @@ body::before {
   position: relative;
   /* Add subtle aging to header */
   box-shadow: inset 0 -10px 20px rgba(139, 116, 90, 0.08);
+}
+
+/* Issue information bar */
+.issue-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.7rem;
+  color: rgba(42, 37, 32, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(42, 37, 32, 0.2);
+  padding-bottom: 5px;
+}
+
+.volume-info {
+  font-weight: bold;
+}
+
+.price-tag {
+  background: #2a2520;
+  color: #f6f3ed;
+  padding: 2px 6px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.edition-info {
+  font-style: italic;
+}
+
+/* Publication info with barcode */
+.publication-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(42, 37, 32, 0.2);
+  font-size: 0.65rem;
+  color: rgba(42, 37, 32, 0.7);
+}
+
+.barcode {
+  text-align: center;
+}
+
+.barcode-lines {
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #2a2520;
+  margin-bottom: 2px;
+}
+
+.barcode-number {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.circulation-info {
+  text-align: right;
+  line-height: 1.3;
 }
 
 /* Add decorative newspaper border */
@@ -207,19 +413,35 @@ body::before {
   );
 }
 
+/* Enhanced newspaper title with authentic ink bleeding and imperfections */
 .newspaper-title {
   font-family: "Libre Baskerville", "Playfair Display", serif;
   font-size: 2.8rem;
   font-weight: 900;
   color: #1a1712;
-  text-shadow: 1px 1px 0px rgba(139, 116, 90, 0.3),
-    1px 1px 0px rgba(101, 85, 65, 0.2);
+  /* Enhanced ink bleeding and vintage printing effects */
+  text-shadow: 1px 1px 0px rgba(139, 116, 90, 0.4),
+    1px 1px 0px rgba(101, 85, 65, 0.3), 2px 2px 1px rgba(139, 116, 90, 0.2),
+    /* Ink bleed simulation */ 0 0 2px rgba(42, 37, 32, 0.3),
+    0 0 4px rgba(42, 37, 32, 0.15);
   letter-spacing: 4px;
   margin: 8px 0 8px 0;
   text-transform: uppercase;
-  /* Vintage ink bleeding effect */
-  filter: contrast(1.2);
+  /* Vintage printing quality simulation */
+  filter: contrast(1.3) blur(0.1px);
   position: relative;
+  /* Ink inconsistency effect */
+  background: linear-gradient(
+    90deg,
+    rgba(42, 37, 32, 0.05) 0%,
+    transparent 20%,
+    rgba(42, 37, 32, 0.03) 40%,
+    transparent 60%,
+    rgba(42, 37, 32, 0.04) 80%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 /* Add vintage typography flourishes */
@@ -376,21 +598,49 @@ body::before {
   );
 }
 
-/* Headlines - Authentic Newspaper Typography */
+/* Headlines - Enhanced authentic newspaper typography with printing imperfections */
 .main-headline {
   font-family: "Libre Baskerville", serif;
   font-size: 3.8rem;
   font-weight: 900;
   color: #1a1712;
   margin-bottom: 15px;
-  text-shadow: 1px 1px 0px rgba(139, 116, 90, 0.3),
-    2px 2px 0px rgba(101, 85, 65, 0.2);
+  /* Enhanced vintage ink bleeding and printing imperfections */
+  text-shadow: 1px 1px 0px rgba(139, 116, 90, 0.4),
+    2px 2px 0px rgba(101, 85, 65, 0.3), 0 0 2px rgba(42, 37, 32, 0.4),
+    0 0 4px rgba(42, 37, 32, 0.2);
   line-height: 1.1;
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
-  /* Vintage ink bleeding */
-  filter: contrast(1.3);
+  /* Vintage printing quality simulation with slight blur */
+  filter: contrast(1.4) blur(0.15px);
+  /* Kerning inconsistencies */
+  word-spacing: 0.1em;
+  /* Slight ink spread effect */
+  background: linear-gradient(
+    90deg,
+    rgba(42, 37, 32, 0.02) 0%,
+    transparent 30%,
+    rgba(42, 37, 32, 0.03) 70%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Add broken letter simulation for some headlines */
+.main-headline::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 2px;
+  height: 8px;
+  background: rgba(245, 240, 230, 0.8);
+  z-index: 2;
+  transform: rotate(45deg);
+  opacity: 0.7;
 }
 
 .sub-headline {
@@ -402,6 +652,11 @@ body::before {
   text-align: center;
   font-weight: 500;
   padding: 0 20px;
+  /* Lighter ink simulation */
+  color: rgba(42, 37, 32, 0.92);
+  filter: brightness(1.08);
+  /* Subtle text variations */
+  text-shadow: 0 0 0.5px rgba(42, 37, 32, 0.2);
 }
 
 .page-headline {
@@ -411,13 +666,28 @@ body::before {
   text-align: center;
   color: #1a1712;
   margin: 40px 0 30px 0;
-  text-shadow: 1px 1px 0px rgba(139, 116, 90, 0.3),
-    2px 2px 0px rgba(101, 85, 65, 0.2);
+  /* Enhanced ink bleeding for page headlines */
+  text-shadow: 1px 1px 0px rgba(139, 116, 90, 0.4),
+    2px 2px 0px rgba(101, 85, 65, 0.3), 0 0 3px rgba(42, 37, 32, 0.3),
+    0 0 6px rgba(42, 37, 32, 0.15);
   border-bottom: 4px double #2a2520;
   padding-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  filter: contrast(1.3);
+  filter: contrast(1.4) blur(0.1px);
+  /* Ink inconsistency variations */
+  background: linear-gradient(
+    180deg,
+    rgba(42, 37, 32, 0.03) 0%,
+    transparent 20%,
+    rgba(42, 37, 32, 0.02) 50%,
+    transparent 80%,
+    rgba(42, 37, 32, 0.04) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Justify text spacing inconsistencies */
+  word-spacing: 0.15em;
 }
 
 .section-headline {
@@ -430,9 +700,15 @@ body::before {
   padding-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  /* Mix serif font variations for authenticity */
+  font-family: "Times New Roman", "Georgia", serif;
+  /* Ink bleed around text */
+  text-shadow: 0 0 1px rgba(42, 37, 32, 0.3),
+    1px 1px 0px rgba(139, 116, 90, 0.2);
+  filter: contrast(1.2);
 }
 
-/* Article Text - Newspaper Column Style */
+/* Article Text - Enhanced newspaper column style with ink variations */
 .article-text {
   font-size: 1rem;
   line-height: 1.7;
@@ -444,11 +720,78 @@ body::before {
   column-gap: 30px;
   column-rule: 1px solid #2a2520;
   text-indent: 1.5em;
+  /* Ink inconsistency simulation */
+  filter: contrast(1.15);
 }
 
-.article-text p {
+/* Ink darkness variations for different paragraphs */
+.article-text p:nth-child(odd) {
   margin-bottom: 15px;
   break-inside: avoid;
+  /* Slightly lighter ink */
+  color: rgba(42, 37, 32, 0.95);
+  filter: brightness(1.05);
+}
+
+.article-text p:nth-child(even) {
+  margin-bottom: 15px;
+  break-inside: avoid;
+  /* Slightly darker ink */
+  color: rgba(42, 37, 32, 1);
+  filter: brightness(0.98);
+}
+
+/* Random ink bleed effects for text imperfections */
+.article-text p:nth-child(3n) {
+  text-shadow: 0 0 0.5px rgba(42, 37, 32, 0.3);
+  /* Uneven word spacing simulation */
+  word-spacing: 0.12em;
+}
+
+.article-text p:nth-child(5n) {
+  filter: blur(0.1px) contrast(1.1);
+  /* Slight letter spacing inconsistency */
+  letter-spacing: 0.02em;
+}
+
+.article-text p:nth-child(7n) {
+  /* Justification quirks - uneven spacing */
+  text-align: justify;
+  word-spacing: 0.08em;
+  /* Font variation (mix serif fonts) */
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.article-text p:nth-child(4n) {
+  /* Ink blob simulation */
+  position: relative;
+}
+
+.article-text p:nth-child(4n)::after {
+  content: "●";
+  position: absolute;
+  top: 0.3em;
+  right: 2em;
+  font-size: 0.2em;
+  color: rgba(42, 37, 32, 0.4);
+  opacity: 0.6;
+}
+
+/* Broken letter simulation */
+.article-text p:nth-child(6n) {
+  position: relative;
+}
+
+.article-text p:nth-child(6n)::before {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: 3em;
+  width: 1px;
+  height: 0.8em;
+  background: rgba(245, 240, 230, 0.8);
+  z-index: 2;
+  transform: rotate(15deg);
 }
 
 .article-text::first-letter {
@@ -461,11 +804,15 @@ body::before {
   font-family: "Libre Baskerville", serif;
   font-weight: 900;
   color: #1a1712;
-  text-shadow: 2px 2px 0px rgba(139, 116, 90, 0.3);
+  /* Enhanced drop cap with ink bleeding */
+  text-shadow: 2px 2px 0px rgba(139, 116, 90, 0.4),
+    0 0 2px rgba(42, 37, 32, 0.3), 0 0 4px rgba(42, 37, 32, 0.1);
   /* Ornamental border around drop cap */
   border: 2px solid #2a2520;
   padding: 8px 12px 4px 12px;
   background: rgba(139, 116, 90, 0.08);
+  /* Slight ink bleed around the border */
+  box-shadow: inset 0 0 3px rgba(42, 37, 32, 0.2), 0 0 1px rgba(42, 37, 32, 0.3);
 }
 
 /* Single column text for specific sections */
@@ -524,9 +871,30 @@ body::before {
   border: 4px solid #2a2520;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4),
     inset 0 0 20px rgba(139, 116, 90, 0.1);
-  /* Vintage photo effects */
-  filter: sepia(25%) contrast(1.2) brightness(0.95);
+  /* Enhanced vintage photo effects with halftone simulation */
+  filter: sepia(30%) contrast(1.3) brightness(0.92) grayscale(15%);
   position: relative;
+  /* Halftone pattern overlay */
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 0
+    ),
+    radial-gradient(circle at 3px 3px, rgba(0, 0, 0, 0.05) 1px, transparent 0);
+  background-size: 4px 4px, 8px 8px;
+  background-blend-mode: multiply;
+}
+
+/* Add authentic newspaper photo border */
+.portrait-photo::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid rgba(42, 37, 32, 0.3);
+  pointer-events: none;
 }
 
 .photo-caption {
@@ -670,9 +1038,17 @@ body::before {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  /* Vintage photo effect */
-  filter: sepia(20%) contrast(1.15) brightness(0.95);
+  /* Enhanced vintage photo effect with halftone */
+  filter: sepia(25%) contrast(1.2) brightness(0.93) grayscale(10%);
   transition: transform 0.3s ease;
+  /* Halftone pattern overlay */
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 0
+  );
+  background-size: 6px 6px;
+  background-blend-mode: multiply;
 }
 
 .project-image:hover img {
@@ -996,6 +1372,385 @@ body::before {
   font-size: 0.85rem;
   margin-top: 10px;
   letter-spacing: 1px;
+}
+
+/* Enhanced Newspaper Extras - Authentic Elements */
+.newspaper-extras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+  padding: 20px;
+  background: rgba(139, 116, 90, 0.03);
+  border: 1px solid rgba(42, 37, 32, 0.2);
+  border-radius: 2px;
+}
+
+/* Weather Box */
+.weather-box {
+  background: rgba(245, 240, 230, 0.8);
+  border: 2px solid #2a2520;
+  padding: 12px;
+  font-size: 0.85rem;
+}
+
+.weather-box h4 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #2a2520;
+  padding-bottom: 4px;
+}
+
+.weather-days {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.weather-day {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.weather-icon {
+  font-size: 1.2rem;
+  margin: 2px 0;
+}
+
+.weather-location {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(42, 37, 32, 0.8);
+  margin-top: 6px;
+  border-top: 1px solid rgba(42, 37, 32, 0.3);
+  padding-top: 4px;
+}
+
+/* Stock Market Box */
+.stocks-box {
+  background: rgba(245, 240, 230, 0.8);
+  border: 2px solid #2a2520;
+  padding: 12px;
+  font-size: 0.8rem;
+}
+
+.stocks-box h4 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #2a2520;
+  padding-bottom: 4px;
+}
+
+.stock-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+  border-bottom: 1px dotted rgba(42, 37, 32, 0.3);
+}
+
+.stock-name {
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.stock-price {
+  font-size: 0.75rem;
+}
+
+.stock-change.up {
+  color: #2d5a2d;
+}
+
+.stock-change.down {
+  color: #5a2d2d;
+}
+
+/* Crossword Puzzle */
+.crossword-box {
+  background: rgba(245, 240, 230, 0.8);
+  border: 2px solid #2a2520;
+  padding: 12px;
+  font-size: 0.8rem;
+}
+
+.crossword-box h4 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #2a2520;
+  padding-bottom: 4px;
+}
+
+.crossword-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin: 8px 0;
+  max-width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crossword-row {
+  display: contents;
+}
+
+.cell {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #2a2520;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background: white;
+}
+
+.cell.black {
+  background: #2a2520;
+}
+
+.crossword-clues {
+  font-size: 0.65rem;
+  margin-top: 6px;
+}
+
+.crossword-clues div {
+  margin: 2px 0;
+}
+
+/* Horoscope Box */
+.horoscope-box {
+  background: rgba(245, 240, 230, 0.8);
+  border: 2px solid #2a2520;
+  padding: 12px;
+  font-size: 0.75rem;
+}
+
+.horoscope-box h4 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #2a2520;
+  padding-bottom: 4px;
+}
+
+.horoscope-item {
+  margin: 6px 0;
+  padding: 4px;
+  border-left: 2px solid rgba(42, 37, 32, 0.3);
+  padding-left: 8px;
+}
+
+/* Classifieds Box */
+.classifieds-box {
+  background: rgba(245, 240, 230, 0.8);
+  border: 3px solid #2a2520;
+  padding: 12px;
+  font-size: 0.75rem;
+  /* Authentic newspaper ad border */
+  border-style: double;
+  position: relative;
+}
+
+.classifieds-box::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 1px solid rgba(42, 37, 32, 0.4);
+  pointer-events: none;
+}
+
+.classifieds-box h4 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 2px solid #2a2520;
+  padding-bottom: 4px;
+  background: rgba(42, 37, 32, 0.05);
+  margin: -12px -12px 8px -12px;
+  padding: 8px 12px 4px 12px;
+}
+
+.classified-ad {
+  margin: 6px 0;
+  padding: 6px;
+  border: 2px solid rgba(42, 37, 32, 0.6);
+  background: rgba(255, 255, 255, 0.6);
+  line-height: 1.3;
+  /* Classic newspaper ad styling */
+  border-style: solid;
+  position: relative;
+}
+
+.classified-ad::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 1px solid rgba(42, 37, 32, 0.2);
+  pointer-events: none;
+}
+
+/* Comics Strip */
+.comics-box {
+  background: rgba(245, 240, 230, 0.8);
+  border: 2px solid #2a2520;
+  padding: 12px;
+  font-size: 0.75rem;
+}
+
+.comics-box h4 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #2a2520;
+  padding-bottom: 4px;
+}
+
+.comic-strip {
+  display: flex;
+  gap: 4px;
+}
+
+.comic-panel {
+  flex: 1;
+  border: 1px solid #2a2520;
+  padding: 6px;
+  text-align: center;
+  background: white;
+  font-size: 0.65rem;
+  line-height: 1.2;
+}
+
+/* Public Notices */
+.notices-box {
+  background: rgba(245, 240, 230, 0.8);
+  border: 2px solid #2a2520;
+  padding: 12px;
+  font-size: 0.75rem;
+}
+
+.notices-box h4 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #2a2520;
+  padding-bottom: 4px;
+}
+
+.notice-item {
+  margin: 6px 0;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  border-left: 3px solid #2a2520;
+  padding-left: 8px;
+  line-height: 1.3;
+}
+
+/* Sports Box */
+.sports-box {
+  background: rgba(245, 240, 230, 0.8);
+  border: 2px solid #2a2520;
+  padding: 12px;
+  font-size: 0.75rem;
+}
+
+.sports-box h4 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #2a2520;
+  padding-bottom: 4px;
+}
+
+.sports-score {
+  margin: 4px 0;
+  padding: 3px;
+  border-bottom: 1px dotted rgba(42, 37, 32, 0.3);
+  font-size: 0.7rem;
+}
+
+/* Authentic Newspaper Layout Elements */
+
+/* Page markers and section identifiers */
+.page-marker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(42, 37, 32, 0.3);
+  border-bottom: 1px solid rgba(42, 37, 32, 0.3);
+  font-size: 0.75rem;
+  color: rgba(42, 37, 32, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page-number {
+  font-weight: bold;
+  font-size: 0.9rem;
+  background: rgba(42, 37, 32, 0.1);
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.section-name {
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Bylines and datelines */
+.byline-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(42, 37, 32, 0.2);
+  font-size: 0.85rem;
+  color: rgba(42, 37, 32, 0.8);
+}
+
+.byline {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dateline {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Jump lines */
+.jump-line {
+  margin: 20px 0 10px 0;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(42, 37, 32, 0.7);
+  border: 1px dashed rgba(42, 37, 32, 0.3);
+  background: rgba(139, 116, 90, 0.05);
+  font-style: italic;
 }
 
 /* Responsive Design */
