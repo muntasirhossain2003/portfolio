@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import profile from '../assets/profile.png';
 
 const VintageNewspaper = () => {
   const [currentDate, setCurrentDate] = useState("");
@@ -215,6 +216,13 @@ const VintageNewspaper = () => {
     <div className="newspaper">
       {/* Authentic Newspaper Header */}
       <header className="newspaper-header">
+        {/* Issue info bar */}
+        <div className="issue-info">
+          <span className="volume-info">Volume XLVII, No. 123</span>
+          <span className="price-tag">৳5.00</span>
+          <span className="edition-info">MORNING EDITION</span>
+        </div>
+
         <h1 className="newspaper-title">THE BANGLADESH HERALD</h1>
         <div className="newspaper-subtitle">
           Technology Chronicle • Portfolio Special Edition • Established 1952
@@ -226,6 +234,20 @@ const VintageNewspaper = () => {
           <span>📰 Morning Edition</span>
           <span>📧 siyambhuiyan@iut-dhaka.edu</span>
           <span>💰 Price: 5 Taka</span>
+        </div>
+
+        {/* Barcode and publication info */}
+        <div className="publication-info">
+          <div className="barcode">
+            <div className="barcode-lines">
+              |||| || |||| | |||||| ||| ||||| ||
+            </div>
+            <div className="barcode-number">9 788801 234567</div>
+          </div>
+          <div className="circulation-info">
+            <div>Circulation: 50,000</div>
+            <div>Printed in Gazipur</div>
+          </div>
         </div>
       </header>
 
@@ -251,6 +273,12 @@ const VintageNewspaper = () => {
       <main className="newspaper-content">
         {/* FRONT PAGE SECTION */}
         <section id="front-page" className="newspaper-section">
+          {/* Page number and section marker */}
+          <div className="page-marker">
+            <span className="page-number">A1</span>
+            <span className="section-name">FRONT PAGE | LOCAL NEWS</span>
+          </div>
+
           {/* Breaking News Banner */}
           <div className="breaking-news">
             ⚡ PORTFOLIO: Computer Science Student Documents Personal Projects
@@ -260,7 +288,7 @@ const VintageNewspaper = () => {
           <div className="main-story">
             <div className="story-image">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
+                src={profile}
                 alt="Siyam Bhuiyan"
                 className="portrait-photo"
               />
@@ -272,6 +300,12 @@ const VintageNewspaper = () => {
             </div>
 
             <div className="story-content">
+              {/* Byline and Dateline */}
+              <div className="byline-section">
+                <div className="byline">By Staff Reporter</div>
+                <div className="dateline">GAZIPUR — {currentDate}</div>
+              </div>
+
               <h1 className="main-headline">My Journey in Computer Science</h1>
               <h2 className="sub-headline">
                 Personal Portfolio and Academic Progress Documentation
@@ -308,6 +342,11 @@ const VintageNewspaper = () => {
                   programming competitions and technology events to improve my
                   skills and learn from other developers.
                 </p>
+
+                {/* Jump line simulation */}
+                <div className="jump-line">
+                  <em>Continued on Page A3, Column 2</em>
+                </div>
               </div>
             </div>
           </div>
@@ -362,6 +401,12 @@ const VintageNewspaper = () => {
 
         {/* TECHNOLOGY PORTFOLIO SECTION */}
         <section id="portfolio" className="newspaper-section">
+          {/* Page number and section marker */}
+          <div className="page-marker">
+            <span className="page-number">B2</span>
+            <span className="section-name">TECHNOLOGY | BUSINESS</span>
+          </div>
+
           <h1 className="page-headline">Technology Portfolio</h1>
 
           <div className="projects-grid">
@@ -398,6 +443,12 @@ const VintageNewspaper = () => {
 
         {/* ACHIEVEMENTS SECTION */}
         <section id="achievements" className="newspaper-section">
+          {/* Page number and section marker */}
+          <div className="page-marker">
+            <span className="page-number">C3</span>
+            <span className="section-name">SPORTS & AWARDS | COMPETITION</span>
+          </div>
+
           <h1 className="page-headline">Competition Results & Recognition</h1>
 
           <div className="achievements-grid">
@@ -529,20 +580,158 @@ const VintageNewspaper = () => {
           </div>
         </section>
 
-        {/* Weather & Small Ads */}
+        {/* Enhanced Newspaper Extras Section */}
         <div className="newspaper-extras">
+          {/* Enhanced Weather Box */}
           <div className="weather-box">
-            <h4>Today's Weather</h4>
-            <p>Gazipur: Partly Cloudy, 28°C</p>
-            <p>Humidity: 75% | Wind: 15 km/h</p>
+            <h4>5-Day Weather Forecast</h4>
+            <div className="weather-days">
+              <div className="weather-day">
+                <div className="day">MON</div>
+                <div className="weather-icon">☀️</div>
+                <div className="temp">32°C</div>
+              </div>
+              <div className="weather-day">
+                <div className="day">TUE</div>
+                <div className="weather-icon">⛅</div>
+                <div className="temp">29°C</div>
+              </div>
+              <div className="weather-day">
+                <div className="day">WED</div>
+                <div className="weather-icon">🌧️</div>
+                <div className="temp">26°C</div>
+              </div>
+              <div className="weather-day">
+                <div className="day">THU</div>
+                <div className="weather-icon">⛈️</div>
+                <div className="temp">24°C</div>
+              </div>
+              <div className="weather-day">
+                <div className="day">FRI</div>
+                <div className="weather-icon">🌤️</div>
+                <div className="temp">28°C</div>
+              </div>
+            </div>
+            <div className="weather-location">
+              Gazipur, Bangladesh • Humidity: 75%
+            </div>
           </div>
 
-          <div className="small-ads">
-            <h4>Technology Services</h4>
-            <p>• Web Development: Modern & Responsive</p>
-            <p>• AI Integration: Smart Solutions</p>
-            <p>• Mobile Apps: Cross-Platform</p>
-            <p>Contact: siyambhuiyan@iut-dhaka.edu</p>
+          {/* Tech Stock Market */}
+          <div className="stocks-box">
+            <h4>Tech Stock Market</h4>
+            <div className="stock-listings">
+              <div className="stock-item">
+                <span className="stock-name">APPLE</span>
+                <span className="stock-price">$175.43</span>
+                <span className="stock-change up">+2.1%</span>
+              </div>
+              <div className="stock-item">
+                <span className="stock-name">MSFT</span>
+                <span className="stock-price">$378.85</span>
+                <span className="stock-change up">+1.3%</span>
+              </div>
+              <div className="stock-item">
+                <span className="stock-name">GOOGLE</span>
+                <span className="stock-price">$138.21</span>
+                <span className="stock-change down">-0.8%</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Mini Tech Crossword */}
+          <div className="crossword-box">
+            <h4>Mini Tech Crossword</h4>
+            <div className="crossword-grid">
+              <div className="crossword-row">
+                <div className="cell">J</div>
+                <div className="cell">A</div>
+                <div className="cell">V</div>
+                <div className="cell">A</div>
+              </div>
+              <div className="crossword-row">
+                <div className="cell">S</div>
+                <div className="cell black"></div>
+                <div className="cell black"></div>
+                <div className="cell">P</div>
+              </div>
+              <div className="crossword-row">
+                <div className="cell">O</div>
+                <div className="cell">H</div>
+                <div className="cell">T</div>
+                <div className="cell">I</div>
+              </div>
+            </div>
+            <div className="crossword-clues">
+              <div>
+                <strong>1A:</strong> Coffee language (4)
+              </div>
+              <div>
+                <strong>2D:</strong> Web standard (4)
+              </div>
+            </div>
+          </div>
+
+          {/* Tech Horoscope */}
+          <div className="horoscope-box">
+            <h4>Tech Career Horoscope</h4>
+            <div className="horoscope-item">
+              <strong>PROGRAMMER:</strong> Debug carefully today. Lucky syntax:
+              try-catch
+            </div>
+            <div className="horoscope-item">
+              <strong>DEVELOPER:</strong> New framework awaits. Read docs
+              thoroughly
+            </div>
+          </div>
+
+          {/* Enhanced Classified Tech Ads */}
+          <div className="classifieds-box">
+            <h4>Technology Classifieds</h4>
+            <div className="classified-ad">
+              <strong>FOR SALE:</strong> Vintage Nokia 5110. Snake game
+              included. Perfect condition. Call 555-RETRO
+            </div>
+            <div className="classified-ad">
+              <strong>WANTED:</strong> Python developer for startup. Must love
+              coffee. Remote OK. Email: jobs@startup.com
+            </div>
+            <div className="classified-ad">
+              <strong>SERVICES:</strong> Professional web development • Modern
+              responsive designs • Contact: webdev@email.com
+            </div>
+          </div>
+
+          {/* Comic Strip */}
+          <div className="comics-box">
+            <h4>Binary & Byte Adventures</h4>
+            <div className="comic-strip">
+              <div className="comic-panel">💭 "Great app idea!"</div>
+              <div className="comic-panel">😺 "Facebook for cats!"</div>
+              <div className="comic-panel">🤔 "...with blockchain!"</div>
+            </div>
+          </div>
+
+          {/* Public Notices */}
+          <div className="notices-box">
+            <h4>Public Tech Notices</h4>
+            <div className="notice-item">
+              <strong>UPDATE:</strong> Browser security patches available.
+              Update recommended.
+            </div>
+            <div className="notice-item">
+              <strong>OUTAGE:</strong> Sector 7 WiFi disruption. Est. fix: 2
+              hours.
+            </div>
+          </div>
+
+          {/* Sports Section */}
+          <div className="sports-box">
+            <h4>Sports Brief</h4>
+            <div className="sports-score">
+              🏏 Bangladesh vs Sri Lanka: 247/5
+            </div>
+            <div className="sports-score">⚽ Dhaka Abahani 2-1 Chittagong</div>
           </div>
         </div>
       </main>
