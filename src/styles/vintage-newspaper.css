@@ -157,6 +157,7 @@ body::before {
 .newspaper {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 40px; /* Added horizontal padding for better side spacing */
   background: 
     /* Advanced paper texture with aging */ linear-gradient(
       135deg,
@@ -198,8 +199,8 @@ body::before {
     -1px -1px 4px rgba(255, 255, 255, 0.2);
   position: relative;
   min-height: 100vh;
-  /* Paper curl transform */
-  transform: perspective(1000px) rotateX(0.5deg) rotateY(-0.3deg);
+  /* Reduced paper curl transform for less tilt */
+  transform: perspective(1000px) rotateX(0.2deg) rotateY(-0.2deg);
   /* Edge wear darkening */
   border-radius: 1px;
 }

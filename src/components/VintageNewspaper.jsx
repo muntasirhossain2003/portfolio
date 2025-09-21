@@ -235,20 +235,6 @@ const VintageNewspaper = () => {
           <span>📧 siyambhuiyan@iut-dhaka.edu</span>
           <span>💰 Price: 5 Taka</span>
         </div>
-
-        {/* Barcode and publication info */}
-        <div className="publication-info">
-          <div className="barcode">
-            <div className="barcode-lines">
-              |||| || |||| | |||||| ||| ||||| ||
-            </div>
-            <div className="barcode-number">9 788801 234567</div>
-          </div>
-          <div className="circulation-info">
-            <div>Circulation: 50,000</div>
-            <div>Printed in Gazipur</div>
-          </div>
-        </div>
       </header>
 
       {/* Navigation Bar - Newspaper Sections */}
@@ -273,12 +259,6 @@ const VintageNewspaper = () => {
       <main className="newspaper-content">
         {/* FRONT PAGE SECTION */}
         <section id="front-page" className="newspaper-section">
-          {/* Page number and section marker */}
-          <div className="page-marker">
-            <span className="page-number">A1</span>
-            <span className="section-name">FRONT PAGE | LOCAL NEWS</span>
-          </div>
-
           {/* Breaking News Banner */}
           <div className="breaking-news">
             ⚡ PORTFOLIO: Computer Science Student Documents Personal Projects
