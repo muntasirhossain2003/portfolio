@@ -311,14 +311,14 @@ const VintageNewspaper = () => {
                 <p>
                   My technical skills include programming languages like
                   JavaScript, Python, Java, and C++. I work with web
-                  technologies such as React and Node.js, and I have experience
+                  technologies such as React, NextJS and Node.js, and I have experience
                   with mobile development using React Native. I also work with
                   various databases and cloud platforms.
                 </p>
 
                 <p>
-                  I am currently in my undergraduate program at IUT, where I
-                  balance my coursework with personal projects. I participate in
+                  I am currently 3rd year 2nd semester student in my undergraduate program at IUT, where I
+                  balance my coursework with personal projects. Already completed DSA, Database, Networkign, Machine learning, Web Developemt and Achitecture courses. I participate in
                   programming competitions and technology events to improve my
                   skills and learn from other developers.
                 </p>
