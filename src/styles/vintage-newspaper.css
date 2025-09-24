@@ -1233,6 +1233,463 @@ body::before {
   letter-spacing: 1px;
 }
 
+/* Enhanced Achievement Styles */
+.achievement-banner {
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 116, 90, 0.1) 0%,
+    rgba(101, 85, 65, 0.05) 100%
+  );
+  border: 3px double #2a2520;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.trophy-icons {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  letter-spacing: 10px;
+  animation: trophyGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes trophyGlow {
+  from {
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  }
+}
+
+.achievement-main-title {
+  margin: 15px 0 20px 0 !important;
+  font-size: 2.2rem !important;
+}
+
+.achievement-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  color: #2a2520;
+  margin-top: 15px;
+}
+
+.stat-item {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-item strong {
+  color: #8b745a;
+  font-size: 1.2rem;
+}
+
+.stat-divider {
+  font-size: 1.2rem;
+  color: #8b745a;
+}
+
+/* Featured Achievement Spotlight */
+.featured-achievement {
+  background: linear-gradient(135deg, #f8f5ef 0%, #f4f0e8 100%);
+  border: 4px solid #2a2520;
+  margin-bottom: 40px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+    inset 0 0 30px rgba(139, 116, 90, 0.08);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  background: linear-gradient(135deg, #8b745a 0%, #65553d 100%);
+  color: #f6f3ed;
+  padding: 8px 15px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured-icon {
+  font-size: 1.2rem;
+}
+
+.featured-content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.featured-title {
+  font-family: "Georgia", serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1a1712;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.featured-subtitle {
+  font-size: 1.1rem;
+  color: #8b745a;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.featured-details {
+  font-size: 1rem;
+  color: #2a2520;
+  line-height: 1.5;
+}
+
+.featured-highlight {
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+  color: #2a2520;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: pulseGold 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGold {
+  from {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.4);
+  }
+}
+
+/* Enhanced Achievement Grid */
+.achievements-grid.enhanced {
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+}
+
+.achievement-article.enhanced {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-article.enhanced:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25),
+    inset 0 0 30px rgba(139, 116, 90, 0.1);
+}
+
+.achievement-ribbon {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: linear-gradient(45deg, #8b745a 0%, #65553d 100%);
+  color: #f6f3ed;
+  padding: 8px 35px;
+  transform: rotate(35deg);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ribbon-icon {
+  font-size: 1rem;
+}
+
+/* Position-based styling */
+.achievement-article.champion {
+  border-color: #ffd700;
+  background: linear-gradient(135deg, #fffbf0 0%, #fff8e7 100%);
+}
+
+.achievement-article.champion .achievement-ribbon {
+  background: linear-gradient(45deg, #ffd700 0%, #ffa500 100%);
+  color: #2a2520;
+}
+
+.achievement-article.runner-up {
+  border-color: #c0c0c0;
+  background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+}
+
+.achievement-article.runner-up .achievement-ribbon {
+  background: linear-gradient(45deg, #c0c0c0 0%, #a0a0a0 100%);
+  color: #2a2520;
+}
+
+.achievement-article.third-place {
+  border-color: #cd7f32;
+  background: linear-gradient(135deg, #fff5f0 0%, #ffeee7 100%);
+}
+
+.achievement-article.third-place .achievement-ribbon {
+  background: linear-gradient(45deg, #cd7f32 0%, #b8722c 100%);
+  color: #f6f3ed;
+}
+
+.achievement-badge.enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 116, 90, 0.1) 0%,
+    transparent 70%
+  );
+  animation: badgeGlow 4s ease-in-out infinite;
+}
+
+@keyframes badgeGlow {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+.achievement-content.enhanced {
+  position: relative;
+}
+
+.achievement-category.enhanced {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.achievement-details.enhanced {
+  position: relative;
+  padding: 15px 0;
+}
+
+.achievement-highlight {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(139, 116, 90, 0.1);
+  color: #8b745a;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(139, 116, 90, 0.2);
+}
+
+/* Enhanced Summary Section */
+.achievement-summary.enhanced {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 116, 90, 0.12) 0%,
+    rgba(101, 85, 65, 0.08) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.summary-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.summary-underline {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #8b745a 0%, #65553d 100%);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.competition-timeline {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-top: 2px solid rgba(139, 116, 90, 0.2);
+  border-bottom: 2px solid rgba(139, 116, 90, 0.2);
+}
+
+.timeline-item {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.timeline-marker {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.timeline-marker.champion {
+  animation: championGlow 3s ease-in-out infinite alternate;
+}
+
+.timeline-marker.finalist {
+  animation: finalistGlow 3s ease-in-out infinite alternate;
+}
+
+.timeline-marker.innovation {
+  animation: innovationGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes championGlow {
+  from {
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+  }
+}
+
+@keyframes finalistGlow {
+  from {
+    text-shadow: 0 0 5px rgba(192, 192, 192, 0.5);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(192, 192, 192, 0.8);
+  }
+}
+
+@keyframes innovationGlow {
+  from {
+    text-shadow: 0 0 5px rgba(139, 116, 90, 0.5);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(139, 116, 90, 0.8);
+  }
+}
+
+.timeline-content {
+  font-size: 0.9rem;
+  color: #2a2520;
+  line-height: 1.4;
+}
+
+.article-text.enhanced {
+  position: relative;
+}
+
+.highlight-quote {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 116, 90, 0.08) 0%,
+    rgba(101, 85, 65, 0.05) 100%
+  );
+  border-left: 4px solid #8b745a;
+  padding: 20px 25px;
+  margin: 25px 0;
+  position: relative;
+  font-style: italic;
+}
+
+.quote-mark {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  font-size: 3rem;
+  color: #8b745a;
+  opacity: 0.3;
+}
+
+.quote-text {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.quote-attribution {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #8b745a;
+  font-weight: bold;
+}
+
+.achievement-metrics {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  padding: 20px;
+  background: rgba(139, 116, 90, 0.05);
+  border-radius: 8px;
+  border: 2px solid rgba(139, 116, 90, 0.15);
+}
+
+.metric-box {
+  text-align: center;
+  flex: 1;
+}
+
+.metric-number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #8b745a;
+  font-family: "Georgia", serif;
+  margin-bottom: 5px;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #2a2520;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.closing-statement {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #2a2520;
+  font-style: italic;
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(139, 116, 90, 0.05);
+  border-radius: 6px;
+  border: 1px solid rgba(139, 116, 90, 0.1);
+}
+
 /* Contact Grid */
 .contact-grid {
   display: grid;
@@ -1816,6 +2273,103 @@ body::before {
   .achievement-article {
     grid-template-columns: 80px 1fr;
     gap: 15px;
+  }
+
+  /* Enhanced Achievement Mobile Styles */
+  .achievement-banner {
+    padding: 20px 15px;
+  }
+
+  .trophy-icons {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  .achievement-main-title {
+    font-size: 1.8rem !important;
+  }
+
+  .achievement-stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .featured-achievement {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  .featured-badge {
+    position: static;
+    margin-bottom: 15px;
+    align-self: flex-start;
+  }
+
+  .featured-highlight {
+    position: static;
+    margin-top: 15px;
+    align-self: center;
+  }
+
+  .featured-title {
+    font-size: 1.4rem;
+  }
+
+  .achievements-grid.enhanced {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .achievement-ribbon {
+    font-size: 0.7rem;
+    padding: 6px 25px;
+    right: -25px;
+  }
+
+  .competition-timeline {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+  }
+
+  .timeline-marker {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .achievement-metrics {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .metric-box {
+    padding: 10px;
+    background: rgba(139, 116, 90, 0.05);
+    border-radius: 4px;
+  }
+
+  .metric-number {
+    font-size: 1.8rem;
+  }
+
+  .highlight-quote {
+    padding: 15px 20px;
+    margin: 20px 0;
+  }
+
+  .quote-mark {
+    font-size: 2rem;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+    padding-left: 15px;
   }
 
   .nav-links {
